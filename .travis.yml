@@ -4,5 +4,5 @@ addons:
   sonarcloud:
 	organization: "giuliana-bezerra-github"
 script:
-  - mvn clean && mvn cobertura:cobertura && mvn package
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar && mvn package
   
