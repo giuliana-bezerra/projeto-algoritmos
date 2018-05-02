@@ -15,7 +15,9 @@ import io.MenuPrinter;
  * Programa que permite a execução de algoritmos para o ensino do seu
  * funcionamento através de uma abordagem prática. A ideia é permitir que o
  * usuário veja o funcionamento do algoritmo e assim seja capaz de implementá-lo
- * adicinando variações necessárias.
+ * adicinando variações necessárias. A interface com o usuário poderá ser
+ * customizada sem maiores dificuldades já que a mesma é referenciada como uma
+ * abstração.
  * 
  * @author giuliana.bezerra
  *
