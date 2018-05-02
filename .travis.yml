@@ -2,5 +2,3 @@ language: java
 jdk: oraclejdk8
 script:
   - mvn clean && mvn cobertura:cobertura && mvn package
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
