@@ -1,3 +1,5 @@
 language: java
 jdk: oraclejdk8
-- bash <(curl -s https://codecov.io/bash)
+script:
+  - ./mvnw clean && mvnw package
+  - bash <(curl -s https://codecov.io/bash)
