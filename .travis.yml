@@ -1,4 +1,8 @@
 language: java
 jdk: oraclejdk8
+addons:
+  sonarcloud:
+	organization: "giuliana-bezerra-github"
 script:
   - mvn clean && mvn cobertura:cobertura && mvn package
+  
