@@ -8,6 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import algoritmo.AlgoritmoOrdenacao;
 import algoritmo.NaturalComparator;
+import entidade.ElementosMaioresMenoresPivo;
 
 /**
  * Implementa o algoritmo de ordenação Quicksort. Para tal, os seguintes passos
@@ -55,26 +56,5 @@ public class Quicksort<T extends Comparable<T>> implements AlgoritmoOrdenacao<T>
 				elementosMaioresMenoresPivo.getElementosMaioresPivo().add(elemento);
 		}
 		return elementosMaioresMenoresPivo;
-	}
-}
-
-class ElementosMaioresMenoresPivo<T> {
-	private List<T> elementosMaioresPivo = new ArrayList<>();
-	private List<T> elementosMenoresPivo = new ArrayList<>();
-
-	public List<T> getElementosMaioresPivo() {
-		return elementosMaioresPivo;
-	}
-
-	public void setElementosMaioresPivo(List<T> elementosMaioresPivo) {
-		this.elementosMaioresPivo = elementosMaioresPivo;
-	}
-
-	public List<T> getElementosMenoresPivo() {
-		return elementosMenoresPivo;
-	}
-
-	public void setElementosMenoresPivo(List<T> elementosMenoresPivo) {
-		this.elementosMenoresPivo = elementosMenoresPivo;
 	}
 }
