@@ -1,5 +1,6 @@
 package io;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,14 +14,18 @@ import javax.annotation.PreDestroy;
  * @author giuliana.bezerra
  *
  */
-public class MenuPrinter implements Menu<String> {
+public class MenuPrinter extends Menu<String> {
 	private static final Logger LOGGER = Logger.getLogger(MenuPrinter.class.getName());
 	private static Leitor leitor = new LeitorSystemIn();
+
+	public MenuPrinter(InputStream inputStream) {
+		this.inputStream = inputStream;
+	}
 
 	@Override
 	public int exibirMenuOpcao(String texto) {
 		LOGGER.log(Level.INFO, texto);
-		return leitor.lerInt();
+		return leitor.lerInt(inputStream);
 	}
 
 	@PreDestroy
@@ -31,6 +36,6 @@ public class MenuPrinter implements Menu<String> {
 	@Override
 	public List<String> exibirMenuLeituraListaOrdenavel(String texto) {
 		LOGGER.log(Level.INFO, texto);
-		return leitor.lerLista();
+		return leitor.lerLista(inputStream);
 	}
 }

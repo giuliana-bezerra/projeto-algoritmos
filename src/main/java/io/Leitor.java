@@ -1,5 +1,6 @@
 package io;
 
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -9,9 +10,9 @@ import java.util.List;
  *
  */
 public interface Leitor {
-	public int lerInt();
+	public int lerInt(InputStream inputStream);
 
 	public void close();
 
-	public List<String> lerLista();
+	public List<String> lerLista(InputStream inputStream);
 }

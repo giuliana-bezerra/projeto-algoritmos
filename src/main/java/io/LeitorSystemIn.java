@@ -1,5 +1,6 @@
 package io;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,10 +13,11 @@ import java.util.StringTokenizer;
  *
  */
 public class LeitorSystemIn implements Leitor {
-	private static Scanner leitura = new Scanner(System.in);
+	private Scanner leitura;
 
 	@Override
-	public int lerInt() {
+	public int lerInt(InputStream inputStream) {
+		leitura = new Scanner(inputStream);
 		return leitura.nextInt();
 	}
 
@@ -25,10 +27,9 @@ public class LeitorSystemIn implements Leitor {
 	}
 
 	@Override
-	public List<String> lerLista() {
+	public List<String> lerLista(InputStream inputStream) {
 		List<String> lista = new ArrayList<>();
-		// Consumir caractere de quebra de linha
-		leitura.nextLine();
+		leitura = new Scanner(inputStream);
 		String listaStr = leitura.nextLine();
 		StringTokenizer stringTokenizer = new StringTokenizer(listaStr, " ");
 		while (stringTokenizer.hasMoreTokens())

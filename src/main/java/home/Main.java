@@ -23,7 +23,7 @@ import io.MenuPrinter;
  *
  */
 public class Main {
-	private static Menu<String> menu = new MenuPrinter();
+	private static Menu<String> menu = new MenuPrinter(System.in);
 	private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
 	/**
@@ -41,14 +41,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		OpcaoAlgoritmo<String> opcaoAlgoritmo = null;
-		int opcao = exibirMenuDeAlgoritmos();
+		int opcaoMenuPrincipal = exibirMenuDeAlgoritmos();
 
-		if (isOrdenacao(opcao)) {
+		if (isOrdenacao(opcaoMenuPrincipal)) {
 			opcaoAlgoritmo = new OpcaoOrdenacao<>();
 		} else {
 			fecharPrograma();
 		}
-		opcaoAlgoritmo.executar(menu);
+		int opcaoMenuAlgoritmos = opcaoAlgoritmo.exibirMenu(menu);
+		String listaOrdenada = opcaoAlgoritmo.executar(menu, opcaoMenuAlgoritmos).toString();
+		LOGGER.info(listaOrdenada);
 	}
 
 	private static void fecharPrograma() {

@@ -1,8 +1,7 @@
 package algoritmo;
 
+import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import io.Menu;
 import ordenacao.Quicksort;
@@ -14,7 +13,6 @@ import ordenacao.Quicksort;
  *
  */
 public class OpcaoOrdenacao<T extends Comparable<T>> implements OpcaoAlgoritmo<T> {
-	private static final Logger LOGGER = Logger.getLogger(OpcaoOrdenacao.class.getName());
 
 	public int exibirMenu(Menu<T> menu) {
 		String menuTexto = "[-------- Ordenacao ---------]";
@@ -30,17 +28,15 @@ public class OpcaoOrdenacao<T extends Comparable<T>> implements OpcaoAlgoritmo<T
 	}
 
 	@Override
-	public void executar(Menu<T> menu) {
+	public List<T> executar(Menu<T> menu, int opcao) {
 		AlgoritmoOrdenacao<T> algoritmoOrdenacao;
-		int opcao = exibirMenu(menu);
 		if (isOrdenacaoQuicksort(opcao)) {
 			algoritmoOrdenacao = new Quicksort<>();
 		} else {
-			return;
+			return Collections.emptyList();
 		}
 		List<T> itens = lerItensParaOrdenar(menu);
-		String listaOrdenadaStr = algoritmoOrdenacao.ordenar(itens).toString();
-		LOGGER.log(Level.INFO, listaOrdenadaStr);
+		return algoritmoOrdenacao.ordenar(itens);
 	}
 
 	private List<T> lerItensParaOrdenar(Menu<T> menu) {

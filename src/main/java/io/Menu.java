@@ -1,5 +1,6 @@
 package io;
 
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -8,8 +9,14 @@ import java.util.List;
  * @author giuliana.bezerra
  *
  */
-public interface Menu<T> {
-	public int exibirMenuOpcao(String texto);
+public abstract class Menu<T> {
+	protected InputStream inputStream;
+	
+	public InputStream getInputStream() {
+		return inputStream;
+	}
+	
+	public abstract int exibirMenuOpcao(String texto);
 
-	public List<T> exibirMenuLeituraListaOrdenavel(String texto);
+	public abstract List<T> exibirMenuLeituraListaOrdenavel(String texto);
 }
