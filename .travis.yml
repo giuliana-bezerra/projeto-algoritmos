@@ -1,17 +1,4 @@
 language: java
-sudo: false
-install: true
-
-addons:
-  sonarcloud:
-	organization: "giuliana-bezerra-github"
-	
 jdk: oraclejdk8
-
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar && mvn package
-  
-cache:
-  directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'
+- mvn clean && mvn cobertura:cobertura && mvn package
