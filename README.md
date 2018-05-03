@@ -49,4 +49,4 @@ Ver javadoc.
 Esse projeto ainda está em fase de desenvolvimento, portanto só possui suporte inicial a alguns algoritmos de ordenação.
 
 ## Desenvolvimento
-Constribuições são muito bem-vindas através de implementação de outros algoritmos conhecidos e a adição deles ao menu de opções do programa. Inicialmente a interface com o usuário foi feita via terminal, mas poderia evoluir para outras formas. O projeto é bastante testado incluindo a análise de métricas via *SonarLint*, por isso é importante desenvolver mantendo esse padrão de qualidade dos artefatos. **Novas contribuiuções sempre devem ser acompanhadas de testes unitários**.
+Constribuições são muito bem-vindas através da implementação de outros algoritmos conhecidos e a adição deles ao menu de opções do programa. Inicialmente a interface com o usuário foi feita via terminal, mas poderia evoluir para outras formas. O projeto é bastante testado incluindo a análise de métricas via *SonarLint*, por isso é importante desenvolver mantendo esse padrão de qualidade dos artefatos. **Novas contribuições sempre devem ser acompanhadas de testes unitários**.
