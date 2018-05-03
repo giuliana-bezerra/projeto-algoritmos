@@ -5,6 +5,14 @@
 	<groupId>com</groupId>
 	<artifactId>projeto-algoritmos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+	<properties>
+		<sonar.coverage.exclusions>
+			**/src/main/java/home/**.java,
+			**/src/main/java/io/**.java,
+		</sonar.coverage.exclusions>
+	</properties>
+	
 	<build>
 		<plugins>
 			<plugin>
