@@ -23,6 +23,22 @@ public class OpcaoOrdenacaoTest {
 	private OpcaoOrdenacao<String> opcaoOrdenacaoInt;
 
 	@Test
+	public void testExibirMenu() {
+		String input = "1";
+		InputStream in = new ByteArrayInputStream(input.getBytes());
+		Menu<String> menu = new MenuPrinter(in);
+		assertEquals(input, String.valueOf(opcaoOrdenacaoInt.exibirMenu(menu)));
+	}
+
+	@Test
+	public void testExecutarOpcaoSair() {
+		String input = "\n";
+		InputStream in = new ByteArrayInputStream(input.getBytes());
+		Menu<String> menu = new MenuPrinter(in);
+		assertEquals(Collections.emptyList(), opcaoOrdenacaoInt.executar(menu, 2));
+	}
+
+	@Test
 	public void testExecutarListaVazia() {
 		String input = "\n";
 		InputStream in = new ByteArrayInputStream(input.getBytes());
