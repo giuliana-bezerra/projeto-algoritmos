@@ -42,10 +42,10 @@ java -jar projeto-algoritmos-0.0.1-SNAPSHOT-jar-with-dependencies.jar url
 ## Uso
 O programa apresenta um menu de opções para a seleção do algoritmo desejado. São exibidas as opções em categorias e cabe ao usuário informar a categoria desejada ou encerrar a execução do programa.
 
-## Reference
+## Referência
 Ver javadoc.
 
-## Limitations
+## Limitações
 Esse projeto ainda está em fase de desenvolvimento, portanto só possui suporte inicial a alguns algoritmos de ordenação.
 
 ## Desenvolvimento
