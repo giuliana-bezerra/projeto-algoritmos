@@ -1,6 +1,6 @@
 # projeto-algoritmos
 
-[![Build status](https://travis-ci.com/giuliana-bezerra/projeto-algoritmos.svg?branch=master)](https://travis-ci.com/giuliana-bezerra/projeto-algoritmos) [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com:projeto-algoritmos)](https://sonarcloud.io/dashboard/index/com:projeto-algoritmos)
+[![Build status](https://travis-ci.com/giuliana-bezerra/projeto-algoritmos.svg?branch=master)](https://travis-ci.com/giuliana-bezerra/projeto-algoritmos) ![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com%3Aprojeto-algoritmos&metric=alert_status)
 
 #### Índice
 
